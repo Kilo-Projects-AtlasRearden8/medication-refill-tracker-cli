@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medication-refill-tracker"
+version = "0.1.0"
+description = "Local-first CLI to track prescriptions, refill dates, and pharmacy contacts with due-date alerts and JSON/CSV export. Education only, never medical advice."
+requires-python = ">=3.8"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Asdale Dynamics, LLC" }]
+keywords = ["medication", "refill", "tracker", "cli", "local-first"]
+
+[project.scripts]
+med-refill = "refill_tracker.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["refill_tracker*"]
